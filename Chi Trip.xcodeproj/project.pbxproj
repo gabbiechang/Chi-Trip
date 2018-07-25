@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0664146AB35D7472D0601BC9 /* Pods_Chi_Trip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F944DF1D1D681FBECA8CE854 /* Pods_Chi_Trip.framework */; };
 		456D43C9210662B40005B613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456D43C8210662B40005B613 /* AppDelegate.swift */; };
 		456D43CB210662B40005B613 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456D43CA210662B40005B613 /* ViewController.swift */; };
 		456D43CE210662B40005B613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456D43CC210662B40005B613 /* Main.storyboard */; };
 		456D43D0210662B70005B613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456D43CF210662B70005B613 /* Assets.xcassets */; };
 		456D43D3210662B70005B613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456D43D1210662B70005B613 /* LaunchScreen.storyboard */; };
+		456D43DC2107A72E0005B613 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456D43DB2107A72E0005B613 /* NetworkManager.swift */; };
+		456D43DE2107AACB0005B613 /* Attractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456D43DD2107AACB0005B613 /* Attractions.swift */; };
+		456D43E2210832330005B613 /* AttractionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456D43E1210832330005B613 /* AttractionTableViewCell.swift */; };
+		456D43E42108359D0005B613 /* AttractionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456D43E32108359D0005B613 /* AttractionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,13 @@
 		456D43CF210662B70005B613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		456D43D2210662B70005B613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		456D43D4210662B70005B613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		456D43DB2107A72E0005B613 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		456D43DD2107AACB0005B613 /* Attractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attractions.swift; sourceTree = "<group>"; };
+		456D43E1210832330005B613 /* AttractionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionTableViewCell.swift; sourceTree = "<group>"; };
+		456D43E32108359D0005B613 /* AttractionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttractionsViewController.swift; sourceTree = "<group>"; };
+		47143C424077441FA6D25307 /* Pods-Chi Trip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chi Trip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chi Trip/Pods-Chi Trip.debug.xcconfig"; sourceTree = "<group>"; };
+		8CBBEE234FF058EC4D21E619 /* Pods-Chi Trip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chi Trip.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chi Trip/Pods-Chi Trip.release.xcconfig"; sourceTree = "<group>"; };
+		F944DF1D1D681FBECA8CE854 /* Pods_Chi_Trip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chi_Trip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0664146AB35D7472D0601BC9 /* Pods_Chi_Trip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				456D43C7210662B40005B613 /* Chi Trip */,
 				456D43C6210662B40005B613 /* Products */,
+				F27D1BCD4616818DDD6685C0 /* Pods */,
+				C1E2B6713F24F437FC20C0F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,43 @@
 		456D43C7210662B40005B613 /* Chi Trip */ = {
 			isa = PBXGroup;
 			children = (
+				456D43DA2107A70C0005B613 /* Networking Services */,
 				456D43C8210662B40005B613 /* AppDelegate.swift */,
 				456D43CA210662B40005B613 /* ViewController.swift */,
 				456D43CC210662B40005B613 /* Main.storyboard */,
+				456D43E32108359D0005B613 /* AttractionsViewController.swift */,
+				456D43E1210832330005B613 /* AttractionTableViewCell.swift */,
 				456D43CF210662B70005B613 /* Assets.xcassets */,
 				456D43D1210662B70005B613 /* LaunchScreen.storyboard */,
 				456D43D4210662B70005B613 /* Info.plist */,
+				456D43DD2107AACB0005B613 /* Attractions.swift */,
 			);
 			path = "Chi Trip";
+			sourceTree = "<group>";
+		};
+		456D43DA2107A70C0005B613 /* Networking Services */ = {
+			isa = PBXGroup;
+			children = (
+				456D43DB2107A72E0005B613 /* NetworkManager.swift */,
+			);
+			path = "Networking Services";
+			sourceTree = "<group>";
+		};
+		C1E2B6713F24F437FC20C0F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F944DF1D1D681FBECA8CE854 /* Pods_Chi_Trip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F27D1BCD4616818DDD6685C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47143C424077441FA6D25307 /* Pods-Chi Trip.debug.xcconfig */,
+				8CBBEE234FF058EC4D21E619 /* Pods-Chi Trip.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 456D43D7210662B70005B613 /* Build configuration list for PBXNativeTarget "Chi Trip" */;
 			buildPhases = (
+				175137729CCA25E264E9A3A5 /* [CP] Check Pods Manifest.lock */,
 				456D43C1210662B40005B613 /* Sources */,
 				456D43C2210662B40005B613 /* Frameworks */,
 				456D43C3210662B40005B613 /* Resources */,
+				49E9AC2D75F2A500BFD85F89 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +176,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		175137729CCA25E264E9A3A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chi Trip-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49E9AC2D75F2A500BFD85F89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Chi Trip/Pods-Chi Trip-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chi Trip/Pods-Chi Trip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		456D43C1210662B40005B613 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456D43DE2107AACB0005B613 /* Attractions.swift in Sources */,
+				456D43E2210832330005B613 /* AttractionTableViewCell.swift in Sources */,
+				456D43DC2107A72E0005B613 /* NetworkManager.swift in Sources */,
 				456D43CB210662B40005B613 /* ViewController.swift in Sources */,
 				456D43C9210662B40005B613 /* AppDelegate.swift in Sources */,
+				456D43E42108359D0005B613 /* AttractionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +369,7 @@
 		};
 		456D43D8210662B70005B613 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47143C424077441FA6D25307 /* Pods-Chi Trip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +387,7 @@
 		};
 		456D43D9210662B70005B613 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CBBEE234FF058EC4D21E619 /* Pods-Chi Trip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
