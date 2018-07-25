@@ -17,6 +17,7 @@ struct Attraction {
     
     
     init(json: JSON) {
+        print(json)
         self.name = json["name"].stringValue
        self.imageURL =  json["image_url"].stringValue
        // self.description =
