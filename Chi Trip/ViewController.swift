@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class ViewController: UIViewController {
 
+//    var attractions = [Attraction](){
+//        didSet{
+//            DispatchQueue.main.async {
+//             //  tableview.reloadData()
+//            }
+//        }
+//    }
+//    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
