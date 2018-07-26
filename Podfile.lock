@@ -1,13 +1,16 @@
 PODS:
   - Alamofire (4.7.3)
+  - ISPageControl (0.1.0)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`)
+  - ISPageControl (~> 0.1.0)
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ISPageControl
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -21,8 +24,9 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  ISPageControl: cadeb38e9ecdf05540c69ea1132612521b3caa2a
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: de91c4965021042fba446601ce97e69aa4ae2b5e
+PODFILE CHECKSUM: 9e4ece2965f4a3a825139ee6064e9145b7bd7b9b
 
 COCOAPODS: 1.5.3
