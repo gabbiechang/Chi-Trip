@@ -11,9 +11,17 @@ import SwiftyJSON
 import Alamofire
 
 struct NetworkManager {
-    static func getAttractions (callback: @escaping ([Attraction]) -> Void ){
+    
+//    let topCities = ["Chicago", "San Francisco", "Los Angeles", "New York City", "Las Vegas", "Boston", "Washington", "Orlando", "Miami"]
+//    
+    let mapFilterCategories = ["Tourist Attractions", "Landmarks & Historical Buildings", "Outdoor Activities", "Museums"]
+    
+    
+    
+    
+    static func getAttractions (city: String, filter: String, callback: @escaping ([Attraction]) -> Void ){
         
-        let apiToContact = "https://api.yelp.com/v3/businesses/search?term=park&location=94102"
+        let apiToContact = "https://api.yelp.com/v3/businesses/search?term=\(filter)&location=\(city)"
         let url = URL(string: apiToContact)
         
         var request = URLRequest(url: url!)

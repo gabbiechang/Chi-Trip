@@ -20,29 +20,8 @@ struct Attraction {
         print(json)
         self.name = json["name"].stringValue
        self.imageURL =  json["image_url"].stringValue
-       // self.description =
+    //   self.description = json[""].stringValue //no description
         
     }
     
 }
-
-
-
-//import Foundation
-//import SwiftyJSON
-//
-//struct Movie {
-//    let name: String
-//    let rightsOwner: String
-//    let price: Double
-//    let link: String
-//    let releaseDate: Strsing
-//
-//    init(json: JSON) {
-//        self.name = json["im:name"]["label"].stringValue
-//        self.rightsOwner = json["rights"]["label"].stringValue
-//        self.price = json["im:price"]["attributes"]["amount"].doubleValue
-//        self.link = json["link"][0]["attributes"]["href"].stringValue
-//        self.releaseDate = json["im:releaseDate"]["attributes"]["label"].stringValue
-//    }
-//}

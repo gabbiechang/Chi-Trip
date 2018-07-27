@@ -8,19 +8,30 @@
 
 import UIKit
 
-class ExploreViewController: UIViewController {
+class ExploreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    // MARK: - Properties
-    
-    
-    
-    // MARK: - IBOutlets
+    @IBOutlet weak var tableView: UITableView!
     
     
-    // MARK: - Methods
+    let topCities = ["Chicago", "San Francisco", "Los Angeles", "New York City", "Las Vegas", "Boston", "Washington", "Orlando", "Miami"]
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // 1
+        return topCities.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // 2
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cityTableViewCell", for: indexPath) as! BigCitiesTableViewCell
+        cell.cityLabel.text = topCities[indexPath.row]
+        
+        return cell
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    // MARK: - IBActions
 }
+
+

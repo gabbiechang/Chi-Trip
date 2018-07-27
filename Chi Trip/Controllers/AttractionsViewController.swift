@@ -10,6 +10,19 @@ import UIKit
 
 
 
+// MARK: - IBOutlets
+
+
+// MARK: - Methods
+
+
+
+
+
+
+
+
+
 
 
 //class AttractionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
