@@ -13,6 +13,5 @@ class BigCitiesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cityLabel: UILabel!
     
-    
-    
 }
+

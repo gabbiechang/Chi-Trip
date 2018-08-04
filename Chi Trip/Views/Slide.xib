@@ -40,11 +40,6 @@
                 <constraint firstItem="fJr-ch-6KM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="cvH-oL-Mb1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <connections>
-                <outlet property="imageVIew" destination="fJr-ch-6KM" id="ZFZ-Ai-ZFe"/>
-                <outlet property="labelDescription" destination="UO2-Vx-0wh" id="qlb-UG-lYT"/>
-                <outlet property="labelTitle" destination="5b7-bG-clH" id="7ZU-uc-ZC3"/>
-            </connections>
         </view>
     </objects>
 </document>
