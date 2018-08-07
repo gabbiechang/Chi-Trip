@@ -8,6 +8,7 @@
 //
 //import Foundation
 import UIKit
+//import GoogleMaps
 import MapKit
 import SwiftyJSON
 //
@@ -16,7 +17,7 @@ class MapViewController: UIViewController
     @IBOutlet weak var mapView: MKMapView!
     
     var favorites = [Favorite]()
-
+//    var googleAPIKey = "AIzaSyAh9_Ub7U3ySx5pJg5roU46TJJqab__qeM"
     
     @IBAction func segmentedControlerDidChange(_ seg: UISegmentedControl) {
         if seg.selectedSegmentIndex == 0 { //my favs
@@ -76,7 +77,7 @@ class MapViewController: UIViewController
 //
 //        }
         
-        mapView.addAnnotations(listOfAttractions)
+        mapView.addAnnotations(favorites)
         
     }
     

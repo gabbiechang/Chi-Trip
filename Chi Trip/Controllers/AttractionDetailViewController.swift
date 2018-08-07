@@ -45,11 +45,14 @@ class AttractionDetailViewController: UIViewController {
         attractionNameLabel.text = self.attraction.name
 //        imageView.image = listOfAttractions?.imageURL
         let combinedTextView = """
-        What
+        
+        What is it?
+        
         \(self.attraction.whatDescription)
         
-        Why
+        Why come?
         \(self.attraction.whyDescription)
+        
         """
         descriptionLabel.text = combinedTextView
         
