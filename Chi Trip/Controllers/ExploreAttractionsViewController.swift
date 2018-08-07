@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ExploreAttractionsViewController: UIViewController {
 
@@ -46,8 +47,12 @@ extension ExploreAttractionsViewController: UITableViewDelegate, UITableViewData
         
         
         let imageURL = URL(string: attraction.imageURL)
-        let imageData = try? Data(contentsOf: imageURL!)
-        cell.cityImageView.image = UIImage(data: imageData!)
+//        guard let imageURL = URL(string: (attraction.imageURL)) else { return assertionFailure("Image URL failed")}
+        
+        cell.cityImageView.kf.setImage(with: imageURL)
+        
+//        let imageData = try? Data(contentsOf: imageURL!)
+//        cell.cityImageView.image = UIImage(data: imageData!)
         
         return cell
     }

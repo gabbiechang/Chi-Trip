@@ -8,19 +8,21 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class AttractionDetailViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var attractionDetailImage: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
+//    @IBOutlet weak var imageLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UITextView!
     @IBOutlet weak var attractionNameLabel: UILabel!
-    @IBOutlet weak var attractionDescriptionLabel: UILabel!
     @IBOutlet weak var addToFavsButton: UIButton!
     
     // MARK: - Properties
     
-    var attraction: Attraction?
+    var attraction: Attraction!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +34,25 @@ class AttractionDetailViewController: UIViewController {
     
     func setupViews() {
         
-        attractionNameLabel.text = attraction?.name
+        attractionNameLabel.text = self.attraction.name
+//        imageView.image = listOfAttractions?.imageURL
+        let combinedTextView = """
+        What
+        \(self.attraction.whatDescription)
+        
+        Why
+        \(self.attraction.whyDescription)
+        """
+        descriptionLabel.text = combinedTextView
+        
         
         guard let imageURL = URL(string: (attraction?.imageURL)!) else { return assertionFailure("Image URL failed")}
-        let imageData = try? Data(contentsOf: imageURL)
-        attractionDetailImage.image = UIImage(data: imageData!)
         
+        imageView.kf.setImage(with: imageURL)
+//
+//        let imageData = try? Data(contentsOf: imageURL)
+//        attractionDetailImage.image = UIImage(data: imageData!)
+//
     }
     
     // MARK: - IBActions

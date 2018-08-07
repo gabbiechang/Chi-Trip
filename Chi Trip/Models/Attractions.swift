@@ -15,6 +15,11 @@ class Attraction: NSObject, MKAnnotation {
     
     
     let name: String
+    
+    var title: String? {
+        return self.name
+    }
+    
     let imageURL: String
     let whatDescription: String
     let whyDescription: String

@@ -7,6 +7,7 @@ target 'Chi Trip' do
 
  pod 'SwiftyJSON'
  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git'
+ pod 'Kingfisher', '~> 4.0'
   # Pods for Chi Trip
   
  # ISPageControl
