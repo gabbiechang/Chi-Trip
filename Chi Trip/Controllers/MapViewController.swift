@@ -13,11 +13,25 @@ import SwiftyJSON
 //
 class MapViewController: UIViewController
 {
-//
-//
     @IBOutlet weak var mapView: MKMapView!
-//
-//
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //    var venues = [Venue]()
 //
 //    func fetchData()
@@ -173,4 +187,4 @@ class MapViewController: UIViewController
 //
 //        return renderer
 //    }
-}
+//}

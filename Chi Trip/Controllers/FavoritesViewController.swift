@@ -15,8 +15,9 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var favorite = [Favorite]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         favorite = CoreDataHelper.retrieveFavorites()
         print(favorite.count)
         tableView.reloadData()

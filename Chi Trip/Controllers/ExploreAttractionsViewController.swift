@@ -12,21 +12,19 @@ class ExploreAttractionsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var attractions = [Attraction]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    var attractions = listOfAttractions
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.reloadData()
         // Do any additional setup after loading the view.
         
-        NetworkManager.getAttractions { (attractions) in
-            self.attractions = attractions
-        }
+        
+//        NetworkManager.getAttractions { (attractions) in
+//            self.attractions = attractions
+//        }
     }
 
 }
