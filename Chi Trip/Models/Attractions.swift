@@ -40,7 +40,7 @@ class Attraction: NSObject, MKAnnotation {
     }
     
     var subtitle: String? {
-        return name
+        return address
     }
     
 

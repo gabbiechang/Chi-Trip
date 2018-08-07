@@ -32,7 +32,7 @@ struct CoreDataHelper {
         return favorite
     }
     
-    static func saveFavorite() {
+    static func save() {
         do {
             try context.save()
         } catch let error {
@@ -42,7 +42,16 @@ struct CoreDataHelper {
     
     static func deleteFavorite(favorite: Favorite) {
         context.delete(favorite)
-        saveFavorite()
+        save()
+    }
+    
+    static func deleteAllFavorites() {
+        let favs = self.retrieveFavorites()
+        for aFav in favs {
+            context.delete(aFav)
+        }
+        
+        save()
     }
     
     static func retrieveFavorites() -> [Favorite] {

@@ -42,6 +42,10 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Chi Trip needs your location to create routes with your favorites in them.</string>
+	<string>Chi Trip needs your location to give you customized routes.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Chi Trip needs your location to give you customized routes.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Chi Trip needs your location to give you customized routes.</string>
 </dict>
 </plist>

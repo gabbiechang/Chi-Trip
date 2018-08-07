@@ -15,9 +15,22 @@ class MapViewController: UIViewController
 {
     @IBOutlet weak var mapView: MKMapView!
     
+    var favorites = [Favorite]()
+
     
+    @IBAction func segmentedControlerDidChange(_ seg: UISegmentedControl) {
+        if seg.selectedSegmentIndex == 0 { //my favs
+            mapView.removeAnnotations(mapView.annotations)
+            mapView.addAnnotations(favorites)
+            
+        } else { //all attractions
+            mapView.removeAnnotations(mapView.annotations)
+            mapView.addAnnotations(listOfAttractions)
+        }
+    }
     
-    
+//    locationManager.requestAlwaysAuthorization()
+//    locationManager.requestWhenInUseAuthorization()
     
     //duc tran mothafukaaaah
     //    var venues = [Venue]()
@@ -55,6 +68,7 @@ class MapViewController: UIViewController
         zoomMapOn(location: initialLocation)
         
         mapView.delegate = self
+        mapView.showsUserLocation = true
         //        fetchData()
         
 //        let listOfAnnotations = listOfAttractions.map { (anAttraction) -> MKAnnotation in
@@ -64,6 +78,12 @@ class MapViewController: UIViewController
         
         mapView.addAnnotations(listOfAttractions)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        favorites = CoreDataHelper.retrieveFavorites()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -181,5 +201,21 @@ extension MapViewController : MKMapViewDelegate
         
         return renderer
     }
+}
+
+extension Favorite: MKAnnotation {
+    public var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: self.lat, longitude: self.long)
+    }
+    
+    public var subtitle: String? {
+        return nil
+//        return self.address
+    }
+    
+    public var title: String? {
+        return self.name
+    }
+    
 }
 

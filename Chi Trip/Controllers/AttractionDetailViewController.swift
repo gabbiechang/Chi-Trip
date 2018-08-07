@@ -20,6 +20,14 @@ class AttractionDetailViewController: UIViewController {
     @IBOutlet weak var attractionNameLabel: UILabel!
     @IBOutlet weak var addToFavsButton: UIButton!
     
+    var hasUserAlreadyAddedAttraction: Bool {
+        let favorites = CoreDataHelper.retrieveFavorites()
+        
+        return favorites.contains(where: { (aFavorite) -> Bool in
+            return aFavorite.title == attraction.title
+        })
+    }
+    
     // MARK: - Properties
     
     var attraction: Attraction!
@@ -53,6 +61,13 @@ class AttractionDetailViewController: UIViewController {
 //        let imageData = try? Data(contentsOf: imageURL)
 //        attractionDetailImage.image = UIImage(data: imageData!)
 //
+        
+        //enable or disable button
+        setupButton()
+    }
+    
+    func setupButton() {
+        //logikkk for setup button
     }
     
     // MARK: - IBActions
@@ -61,20 +76,29 @@ class AttractionDetailViewController: UIViewController {
         
         let favorite = CoreDataHelper.newFavorite()
         favorite.descrip = ""
-        favorite.name = attraction?.name
-//        favorite.coordinate =
+        favorite.name = attraction.name
+        favorite.lat = attraction.coordinate.latitude
+        favorite.long = attraction.coordinate.longitude
         
         guard let imageURL = URL(string: (attraction?.imageURL)!) else { return assertionFailure("Image URL failed")}
+        //TODO: store images in the file base
         let imageData = try? Data(contentsOf: imageURL)
         favorite.image = imageData
         
-        CoreDataHelper.saveFavorite()
+        CoreDataHelper.save()
         
-//        if addToFavsButton.backgroundColor == UIColor.red {
-//            addToFavsButton.backgroundColor = UIColor.purple
+        setupButton()
+//        let lightBlue = UIColor(red: 1, green: 165/255, blue: 233, alpha: 1)
+//        let mediumBlue = UIColor(red: 1, green: 165/255, blue: 233, alpha: 1)
+//        let darkBlue = UIColor(red: 7.1, green: 10.6/255, blue: 14.1, alpha: 1)
+//        let lightPurple = UIColor(red: 1, green: 165/255, blue: 233, alpha: 1)
+
+        
+//        if addToFavsButton.backgroundColor == UIColor.darkBlue {
+//            addToFavsButton.backgroundColor = UIColor.mediumBlue
 //        }
-//        else if addToFavsButton.backgroundColor == UIColor.purple {
-//            addToFavsButton.backgroundColor = UIColor.red
+//        else if addToFavsButton.backgroundColor == UIColor.mediumBlue {
+//            addToFavsButton.backgroundColor = UIColor.darkBlue
 //        }
 //
 //        addToFavsButton.setTitleColor(UIColor.blue, for: UIControlState.selected)

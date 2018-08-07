@@ -15,6 +15,16 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var favorite = [Favorite]()
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            //delete code here
+            break
+        default:
+            break
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
