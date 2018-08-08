@@ -42,9 +42,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "AttractionsTableViewCell", for: indexPath) as! AttractionsTableViewCell
         var favorite = self.favorite[indexPath.row]
         cell.cityAttractionLabel?.text = favorite.name!
-        if let favoriteImageData = favorite.image {
-            cell.cityImageView?.image = UIImage(data: favoriteImageData)
-        }
+        cell.cityImageView?.image = favorite.image
         
         //        cell.cityAttractionLabel?.text = attraction.name
         //lat lon?

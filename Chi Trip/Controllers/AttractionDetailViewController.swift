@@ -83,10 +83,12 @@ class AttractionDetailViewController: UIViewController {
         favorite.lat = attraction.coordinate.latitude
         favorite.long = attraction.coordinate.longitude
         
-        guard let imageURL = URL(string: (attraction?.imageURL)!) else { return assertionFailure("Image URL failed")}
-        //TODO: store images in the file base
-        let imageData = try? Data(contentsOf: imageURL)
-        favorite.image = imageData
+//        guard let imageURL = URL(string: (attraction?.imageURL)!) else { return assertionFailure("Image URL failed")}
+//        //TODO: store images in the file base
+//        let imageData = try? Data(contentsOf: imageURL)
+//        favorite.image = imageData
+//
+        favorite.image = imageView.image!
         
         CoreDataHelper.save()
         
