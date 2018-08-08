@@ -15,6 +15,7 @@ import SwiftyJSON
 class MapViewController: UIViewController
 {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var favorites = [Favorite]()
 //    var googleAPIKey = "AIzaSyAh9_Ub7U3ySx5pJg5roU46TJJqab__qeM"
@@ -30,35 +31,7 @@ class MapViewController: UIViewController
         }
     }
     
-//    locationManager.requestAlwaysAuthorization()
-//    locationManager.requestWhenInUseAuthorization()
-    
-    //duc tran mothafukaaaah
-    //    var venues = [Venue]()
-    
-    //    func fetchData()
-    //    {
-    //        let fileName = Bundle.main.path(forResource: "Venues", ofType: "json")
-    //        let filePath = URL(fileURLWithPath: fileName!)
-    //        var data: Data?
-    //        do {
-    //            data = try Data(contentsOf: filePath, options: Data.ReadingOptions(rawValue: 0))
-    //        } catch let error {
-    //            data = nil
-    //            print("Report error \(error.localizedDescription)")
-    //        }
-    //
-    //        if let jsonData = data {
-    //            let json = JSON(data: jsonData)
-    //            if let venueJSONs = json["response"]["venues"].array {
-    //                for venueJSON in venueJSONs {
-    //                    if let venue = Venue.from(json: venueJSON) {
-    //                        self.venues.append(venue)
-    //                    }
-    //                }
-    //            }
-    //        }
-    //    }
+
     
     // MARK: - VC Lifecycle
     
@@ -77,7 +50,6 @@ class MapViewController: UIViewController
 //
 //        }
         
-        mapView.addAnnotations(favorites)
         
     }
     
@@ -85,6 +57,10 @@ class MapViewController: UIViewController
         super.viewWillAppear(animated)
         
         favorites = CoreDataHelper.retrieveFavorites()
+        if segmentedControl.selectedSegmentIndex == 0 {
+            mapView.removeAnnotations(mapView.annotations)
+            mapView.addAnnotations(favorites)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

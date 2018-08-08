@@ -208,7 +208,7 @@
                                         <rect key="frame" x="0.0" y="234.5" width="375" height="311.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qTz-db-eWA">
-                                                <rect key="frame" x="20" y="20" width="335" height="253.5"/>
+                                                <rect key="frame" x="20" y="16" width="335" height="247.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XL-Ob-epO">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="25.5"/>
@@ -217,7 +217,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uxr-MW-gdK">
-                                                        <rect key="frame" x="0.0" y="25.5" width="335" height="228"/>
+                                                        <rect key="frame" x="0.0" y="25.5" width="335" height="222"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                         <color key="textColor" red="0.070588235294117646" green="0.10588235294117647" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -231,7 +231,7 @@
                                         <constraints>
                                             <constraint firstItem="qTz-db-eWA" firstAttribute="leading" secondItem="wAP-zE-p5f" secondAttribute="leading" constant="20" id="Kvh-g6-sUi"/>
                                             <constraint firstAttribute="trailing" secondItem="qTz-db-eWA" secondAttribute="trailing" constant="20" id="NVJ-Dj-ScP"/>
-                                            <constraint firstItem="qTz-db-eWA" firstAttribute="top" secondItem="wAP-zE-p5f" secondAttribute="top" constant="20" id="PpO-Ah-Z11"/>
+                                            <constraint firstItem="qTz-db-eWA" firstAttribute="top" secondItem="wAP-zE-p5f" secondAttribute="top" constant="16" id="PpO-Ah-Z11"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -240,11 +240,16 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-Il-UqP">
-                                <rect key="frame" x="30" y="580" width="315" height="30"/>
+                                <rect key="frame" x="30" y="575" width="315" height="30"/>
                                 <color key="backgroundColor" red="0.55294117647058827" green="0.41960784313725491" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Add to My Trips">
                                     <color key="titleColor" red="0.9882352941176471" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="addToFavoritesButton:" destination="F0Z-co-lnI" eventType="touchUpInside" id="5gG-1M-3yQ"/>
                                 </connections>
@@ -253,14 +258,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TwN-EF-aFM" firstAttribute="trailing" secondItem="Pjj-bC-hUY" secondAttribute="trailing" id="2Mq-ls-wh9"/>
-                            <constraint firstItem="Pjj-bC-hUY" firstAttribute="bottom" secondItem="EE5-Il-UqP" secondAttribute="bottom" constant="8" id="7vz-HE-lLB"/>
+                            <constraint firstItem="Pjj-bC-hUY" firstAttribute="bottom" secondItem="EE5-Il-UqP" secondAttribute="bottom" constant="13" id="7vz-HE-lLB"/>
                             <constraint firstItem="EE5-Il-UqP" firstAttribute="centerX" secondItem="Rtj-Af-K7F" secondAttribute="centerX" id="GK5-Id-Cwp"/>
                             <constraint firstItem="Pjj-bC-hUY" firstAttribute="bottom" secondItem="TwN-EF-aFM" secondAttribute="bottom" constant="8" id="I9I-Un-K4s"/>
                             <constraint firstItem="TwN-EF-aFM" firstAttribute="top" secondItem="Pjj-bC-hUY" secondAttribute="top" id="LXj-z9-vEW"/>
                             <constraint firstItem="EE5-Il-UqP" firstAttribute="leading" secondItem="Pjj-bC-hUY" secondAttribute="leading" constant="30" id="bSc-Yz-Mtt"/>
                             <constraint firstItem="Pjj-bC-hUY" firstAttribute="trailing" secondItem="EE5-Il-UqP" secondAttribute="trailing" constant="30" id="gNS-wu-a7a"/>
                             <constraint firstItem="TwN-EF-aFM" firstAttribute="leading" secondItem="Pjj-bC-hUY" secondAttribute="leading" id="o4y-II-2SA"/>
-                            <constraint firstItem="EE5-Il-UqP" firstAttribute="top" secondItem="qTz-db-eWA" secondAttribute="bottom" constant="8" id="vIf-dc-PI6"/>
+                            <constraint firstItem="EE5-Il-UqP" firstAttribute="top" secondItem="qTz-db-eWA" secondAttribute="bottom" constant="13" id="vIf-dc-PI6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pjj-bC-hUY"/>
                     </view>
@@ -506,7 +511,7 @@
         <scene sceneID="thr-4Y-r79">
             <objects>
                 <navigationController id="6rO-6F-aRI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="T2V-YS-X2m"/>
+                    <tabBarItem key="tabBarItem" image="bean" id="T2V-YS-X2m"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vo1-MZ-K7X">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -583,6 +588,7 @@
                     <navigationItem key="navigationItem" title="Route" id="C3U-5j-aFL"/>
                     <connections>
                         <outlet property="mapView" destination="fNv-W4-h0M" id="ViJ-8g-9uP"/>
+                        <outlet property="segmentedControl" destination="Svy-ux-35X" id="Aau-Bk-z38"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3a-OL-dJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -664,11 +670,11 @@
             </objects>
             <point key="canvasLocation" x="1748" y="2808.8455772113944"/>
         </scene>
-        <!--Favorites-->
+        <!--Navigation Controller-->
         <scene sceneID="rlw-FC-JCt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mpa-Sy-Lfd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" id="7Hj-dU-v59"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="7Hj-dU-v59"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aPK-Ay-hCT">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -712,6 +718,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bean" width="35" height="28"/>
         <image name="bean.jpg" width="336" height="223"/>
     </resources>
     <color key="tintColor" red="0.11372549019607843" green="0.19215686274509802" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -10,10 +10,10 @@
 		0664146AB35D7472D0601BC9 /* Pods_Chi_Trip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F944DF1D1D681FBECA8CE854 /* Pods_Chi_Trip.framework */; };
 		450DB46521128EF700186194 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450DB46421128EF700186194 /* MapViewController.swift */; };
 		450DB467211A6B3700186194 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450DB466211A6B3700186194 /* Favorite.swift */; };
+		450DB469211B6B2C00186194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450DB468211B6B2C00186194 /* Assets.xcassets */; };
 		455FBFD6210B9147004261C6 /* AttractionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455FBFD5210B9147004261C6 /* AttractionsTableViewController.swift */; };
 		456D43C9210662B40005B613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456D43C8210662B40005B613 /* AppDelegate.swift */; };
 		456D43CE210662B40005B613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456D43CC210662B40005B613 /* Main.storyboard */; };
-		456D43D0210662B70005B613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456D43CF210662B70005B613 /* Assets.xcassets */; };
 		456D43D3210662B70005B613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456D43D1210662B70005B613 /* LaunchScreen.storyboard */; };
 		456D43DC2107A72E0005B613 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456D43DB2107A72E0005B613 /* NetworkManager.swift */; };
 		456D43DE2107AACB0005B613 /* Attractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456D43DD2107AACB0005B613 /* Attractions.swift */; };
@@ -35,11 +35,11 @@
 /* Begin PBXFileReference section */
 		450DB46421128EF700186194 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		450DB466211A6B3700186194 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		450DB468211B6B2C00186194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		455FBFD5210B9147004261C6 /* AttractionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionsTableViewController.swift; sourceTree = "<group>"; };
 		456D43C5210662B40005B613 /* Chi Trip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chi Trip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		456D43C8210662B40005B613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		456D43CD210662B40005B613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		456D43CF210662B70005B613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		456D43D2210662B70005B613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		456D43D4210662B70005B613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		456D43DB2107A72E0005B613 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -95,6 +95,7 @@
 		456D43C7210662B40005B613 /* Chi Trip */ = {
 			isa = PBXGroup;
 			children = (
+				450DB468211B6B2C00186194 /* Assets.xcassets */,
 				45B785B1211226FC000E3102 /* CoreData */,
 				45EFED1D21115A89002CF48A /* Trash */,
 				45C56B02210A3B9B0032362D /* Storyboards */,
@@ -103,7 +104,6 @@
 				45C56AFF210A3B6E0032362D /* Controllers */,
 				456D43DA2107A70C0005B613 /* Networking Services */,
 				456D43C8210662B40005B613 /* AppDelegate.swift */,
-				456D43CF210662B70005B613 /* Assets.xcassets */,
 				456D43D4210662B70005B613 /* Info.plist */,
 			);
 			path = "Chi Trip";
@@ -256,8 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				456D43D3210662B70005B613 /* LaunchScreen.storyboard in Resources */,
-				456D43D0210662B70005B613 /* Assets.xcassets in Resources */,
 				456D43CE210662B40005B613 /* Main.storyboard in Resources */,
+				450DB469211B6B2C00186194 /* Assets.xcassets in Resources */,
 				45EE56AA210B7FE000B86809 /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

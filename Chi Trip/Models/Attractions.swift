@@ -21,16 +21,18 @@ class Attraction: NSObject, MKAnnotation {
     }
     
     let imageURL: String
+    let tinyDescription: String
     let whatDescription: String
     let whyDescription: String
     let address: String
     let coordinate: CLLocationCoordinate2D
     
     
-    init(name: String, imageURL: String, whatDescription: String, whyDescription: String, address: String, coordinate: CLLocationCoordinate2D)
+    init(name: String, imageURL: String, tinyDescription: String, whatDescription: String, whyDescription: String, address: String, coordinate: CLLocationCoordinate2D)
     {
         self.name = name
         self.imageURL = imageURL
+        self.tinyDescription = tinyDescription
         self.whatDescription = whatDescription
         self.whyDescription = whyDescription
         self.address = address
@@ -61,6 +63,7 @@ var listOfAttractions = [
     Attraction(
         name: "Millennium Park",
         imageURL: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Cloud_Gate_%28The_Bean%29_from_east%27.jpg/337px-Cloud_Gate_%28The_Bean%29_from_east%27.jpg",
+        tinyDescription: "25 Acres of beautiful landscape, architecture, and public art.",
         whatDescription: "This 24.5-acre section of Chicago’s front yard is one of the most popular places to spend time outdoors in the city, look at public art and attend special events.",
         whyDescription: "Take a selfie in front of Cloud Gate (a.k.a. the Bean), go for a stroll through the serene Lurie Gardens, catch a free concert in the Frank Gehry-designed Jay Pritzker Pavilion (in the summer) or skate on the McCormick Tribune Ice Rink (in the winter).",
         address: "201 E Randolph St",
@@ -69,6 +72,7 @@ var listOfAttractions = [
     Attraction(
         name: "Art Institute of Chicago",
         imageURL: "https://c1.staticflickr.com/1/23/116815265_f37e129741_b.jpg",
+        tinyDescription: "One of the oldest and largest art museums in the United States.",
         whatDescription: "One of the city’s most well-known cultural institutions, which houses more than 300,000 artworks and an on-site restaurant, Terzo Piano.",
         whyDescription: "Acquaint yourself with classic paintings like Georges Seurat’s A Sunday on La Grande Jatte (as seen in Ferris Bueller’s Day Off) and Grant Wood's American Gothic or explore an expansive collection of contemporary works in the museum’s Modern Wing.",
         address: "111 S Michigan Ave, Chicago, IL 60603",
@@ -77,6 +81,7 @@ var listOfAttractions = [
     Attraction(
         name: "Wrigley Field",
         imageURL: "https://cdn.pixabay.com/photo/2017/05/26/04/45/cubs-2345148_960_720.jpg",
+        tinyDescription: "A baseball park that’s home to the iconic Chicago Cubs.",
         whatDescription: "Built in 1914, Wrigley Field has been the home of North Side baseball team the Chicago Cubs for more than 100 years.",
         whyDescription: "Watch baseball at one of the oldest ballparks in America, sing along during the seventh-inning stretch and see one of the only manually operated scoreboards in existence, controlled by three members of the Cubs staff.",
         address: "1060 W Addison St, Chicago, IL 60613",
@@ -85,6 +90,7 @@ var listOfAttractions = [
     Attraction(
         name: "Garfield Park Conservatory",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/9/93/Garfield_Park_Conservatory_kz15.jpg",
+        tinyDescription: "A large greenhouse conservatory often called the landscape art under glass",
         whatDescription: "Among the largest conservatories in the United States, this giant greenhouse in Garfield Park provides a home for some 600 species of plants (most of which aren’t indigenous to the region).",
         whyDescription: "Stop by 365 days a year to admire the gigantic trees that fill the Palm Room, see a depiction of ancient Illinois vegetation in the Fern Room or window shop for succulents and cacti in the Desert Room.",
         address: "300 N Central Park Ave, Chicago, IL 60624",
@@ -93,6 +99,7 @@ var listOfAttractions = [
     Attraction(
         name: "Lincoln Park Zoo",
         imageURL: "https://c1.staticflickr.com/8/7747/17562834949_9f8f4d95f1_b.jpg",
+        tinyDescription: "A free admission zoo with over 1,100 animals and numerous exhibits.",
         whatDescription: "Located in the middle of Lincoln Park, this 35-acre zoo houses more than 1,000 animals and is one of the few remaining free zoos in the country.",
         whyDescription: "Watch cute African penguins frolicking in Penguin Cove, observe majestic cats in the Kovler Lion House or visit the scaled residents of the McCormick Reptile House—all entirely free of charge.",
         address: "2001 N Clark St, Chicago, IL 60614",
@@ -101,6 +108,7 @@ var listOfAttractions = [
     Attraction(
         name: "The Second City",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/d/d8/Second_City._Old_Town%2C_Chicago.jpg",
+        tinyDescription: "One of the most influential comedy theatres in the world.",
         whatDescription: "Bill Murray, Tina Fey, Stephen Colbert and Joan Rivers are just a few of the famous folks who honed their talents onstage at this theater devoted to sketch and improvised comedy.",
         whyDescription: "You’ll see some of the most talented rising comedic talents (and maybe a couple future Saturday Night Live cast members) on the Second City’s Mainstage. If you want to learn more about improv, stand-up or sketch writing, you can sign up for a class at the Training Center.",
         address: "1616 N Wells St, Chicago, IL 60614",
@@ -109,6 +117,7 @@ var listOfAttractions = [
     Attraction(
         name: "The Field Museum",
         imageURL: "https://c1.staticflickr.com/7/6017/5916893509_8e9fb0fbee_b.jpg",
+        tinyDescription: "A natural history museum that’s home to Sue the Dinosaur.",
         whatDescription: "Founded to house the biological and anthropological collections assembled for the World’s Columbian Exposition of 1893, this massive natural history museum has more dinosaur bones and ancient artifacts than any other institution in Chicago.",
         whyDescription: "Take a trip to the past by descending into a recreation of an ancient Egyptian tomb, explore a vast collection of taxidermy or stare at the sparkling stones in the Grainger Hall of Gems.",
         address: "1400 S Lake Shore Dr, Chicago, IL 60605",
@@ -117,6 +126,7 @@ var listOfAttractions = [
     Attraction(
         name: "Chicago Riverwalk",
         imageURL: "https://c1.staticflickr.com/1/434/18870168669_1de866d04a_b.jpg",
+        tinyDescription: "A scenic pedestrian waterfront on the south bank of the Chicago River.",
         whatDescription: "Hugging the banks of the main branch of the Chicago River, the Riverwalk provides a pedestrian path along the city’s most popular waterway, lined with restaurants, bars and gathering spaces.",
         whyDescription: "The waterside walkway allows you to see observe some of the city’s most gorgeous architecture from a new perspective. You can also sip a glass of merlot at City Winery or board a Water Taxi for a leisurely trip to Chinatown.",
         address: "Chicago Riverwalk, Chicago, IL 60601",
@@ -125,6 +135,7 @@ var listOfAttractions = [
     Attraction(
         name: "Museum of Contemporary Art",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/f/f1/1999chicago1A01.jpg",
+        tinyDescription: "An art museum with individually curated exhibitions throughout the year.",
         whatDescription: "Hosting one of the largest collections of contemporary art in the United States, this Chicago museum is a destination for cutting edge exhibitions and programming.",
         whyDescription: "Take in a constantly changing lineup of exhibitions, including touring shows from the likes of Takashi Murakami and Kerry James Marshall, or stop by the museum’s in-house restaurant, Marisol, where chef Lula Cafe chef Jason Hammel serves an inventive menu.",
         address: "220 E Chicago Ave, Chicago, IL 60611",
@@ -133,6 +144,7 @@ var listOfAttractions = [
     Attraction(
         name: "Shedd Aquarium",
         imageURL: "https://c1.staticflickr.com/3/2102/2069295788_0d9dc73ae0_b.jpg",
+        tinyDescription: "An indoor public aquarium containing over 1,500 species of marine life.",
         whatDescription: "This Museum Campus staple is the home to thousands of aquatic creatures from all around the world, including adorable otters and a giant Pacific octopus.",
         whyDescription: "Watch tropical fish swim through a 90,000-gallon aquarium in the gigantic Caribbean Reef exhibition or pony up some extra cash to have a face-to-face encounter with a beluga whale.",
         address: "1200 S Lake Shore Dr, Chicago, IL 60605",
@@ -141,6 +153,7 @@ var listOfAttractions = [
     Attraction(
         name: "Museum of Science and Industry",
         imageURL: "https://s1.citypass.net/img-afd2056/products/chicago/attractions/msi/gallery/msi-gallery-trains.jpg",
+        tinyDescription: "A science and technology museum with historical planes, boats, and trains.",
         whatDescription: "Interactivity is the name of the game at the Museum of Science and Industry, a Hyde Park institution that boasts a mirror maze, a simulated tornado and a WWII-era U-505 German on display.",
         whyDescription: "Step inside a building that dates back to the World’s Columbian Exposition of 1893 and explore exhibits that depict a Chicago street circa 1910 and a massive model railroad that depicts the 2,200-mile journey from Seattle to Chicago.",
         address: "5700 S Lake Shore Dr, Chicago, IL 60637",
@@ -149,6 +162,7 @@ var listOfAttractions = [
     Attraction(
         name: "Adler Planetarium",
         imageURL: "https://c1.staticflickr.com/3/2065/2084602482_dd28f41674_b.jpg",
+        tinyDescription: "A museum dedicated to the study of astronomy and astrophysics.",
         whatDescription: "Visitors can explore astronomy and astrophysics at the Adler Planetarium, which sits at the outermost tip of Museum Campus (and offers some amazing views of the Chicago skyline).",
         whyDescription: "Learn about the history of U.S. space exploration and take peek inside the tiny Gemini 12 capsule (which took two astronauts to space and back) in the “Mission Moon” exhibition. Then head over to the museum’s Grainger Sky Theater, which uses multiple projectors to screen immersive films on a 70-foot-diameter dome.",
         address: "1300 S Lake Shore Dr, Chicago, IL 60605",
@@ -157,6 +171,7 @@ var listOfAttractions = [
     Attraction(
         name: "National Museum of Mexican Art",
         imageURL: "https://c1.staticflickr.com/7/6158/6164964709_387c249dfe_b.jpg",
+        tinyDescription: "A museum featuring Mexican, Latino, and Chicano art and culture.",
         whatDescription: "Located in the traditionally Hispanic neighborhood of Pilsen, this cultural institution hosts one of the country’s largest collection of Mexican art—and admission is always free.",
         whyDescription: "Inside the permanent “Nuestras Historias” exhibition, you’ll see work from famous artists like José de Páez and Miguel Cabrera as well modern pieces by Chicago-based talent such as muralist Hector Duarte and imagist Errol Ortiz.",
         address: "1852 W 19th St, Chicago, IL 60608",
@@ -165,6 +180,7 @@ var listOfAttractions = [
     Attraction(
         name: "360 CHICAGO",
         imageURL: "https://c1.staticflickr.com/1/606/21229084910_4c529378de_b.jpg",
+        tinyDescription: "An observatory on the 95th floor of the John Hancock Center.",
         whatDescription: "Sitting atop one of the tallest buildings on Michigan Avenue, this observatory places you 1,000 feet in the air, allowing visitors to see four different states on a clear day.",
         whyDescription: "Daredevils will want to test their mettle on 360 CHICAGO’s TILT attraction, which allows guests to lean over the side of the building and look down at the busy streets below them.",
         address: "875 N Michigan Avenue, 94th Floor, Chicago, IL 60611",
@@ -173,6 +189,7 @@ var listOfAttractions = [
     Attraction(
         name: "Willis Tower Skydeck",
         imageURL: "https://c1.staticflickr.com/6/5498/11004243156_367f86c24b_b.jpg",
+        tinyDescription: "The highest observation deck in the US on the 103rd floor of the Willis Tower.",
         whatDescription: "You can get high in Chicago in the Willis Tower’s Skydeck, which is located on the building’s 103rd floor—1,353 feet above the city.",
         whyDescription: "You’re essentially obligated to snap a selfie in the Skydeck’s Ledge—a glass box that hangs over the side of the building, giving you some breathtaking views of the urban expanse surrounding you (and beneath you).",
         address: "233 S Wacker Dr, Chicago, IL 60606",
@@ -181,6 +198,7 @@ var listOfAttractions = [
     Attraction(
         name: "Chicago Cultural Center",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/5/5d/Chicago_cultural_center.jpg",
+        tinyDescription: "The nation’s first free municipal cultural center covering a wide range of arts.",
         whatDescription: "Cultural events and the arts are the focus of this public building, which also happens to contain the world’s largest stained glass Tiffany dome.",
         whyDescription: "There’s always something happening in the Chicago Cultural Center, including free concerts in the Preston Bradley Hall and art exhibitions on the third floor. Best of all, you’ll never have to pay admission.",
         address: "78 E Washington St, Chicago, IL 60602",
@@ -189,6 +207,7 @@ var listOfAttractions = [
     Attraction(
         name: "Music Box Theatre",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/c/c8/The_Music_Box%2C_Chicago.jpg",
+        tinyDescription: "A historical movie theatre that plays vintage films.",
         whatDescription: "This beloved two-screen Lakeview movie house doesn’t usually show the latest blockbusters, but it does screen a curated selection of films in a vintage theater with clouds projected on its ceiling.",
         whyDescription: "Fans of arthouse, limited-release and 70mm films will love the Music Box’s lineup of screenings and midnight movies. Before (or after) the show, check out the adjacent lounge, where you can order a beer and munch on popcorn topped with real butter.",
         address: "3733 N Southport Ave, Chicago, IL 60613",
@@ -197,6 +216,7 @@ var listOfAttractions = [
     Attraction(
         name: "Navy Pier",
         imageURL: "https://c1.staticflickr.com/5/4498/37726981696_d9deeccb35_b.jpg",
+        tinyDescription: "A pier with parks, shops, exhibition facilities, a ferris wheel, and more.",
         whatDescription: "Tourists flock to this stretch of attractions, which juts out into the waters of Lake Michigan. Navy Pier is home to a 200-foot Ferris wheel, the city’s only real IMAX screen, Chicago Children's Museum, Chicago Shakespeare Theater and plentiful dining options.",
         whyDescription: "The sheer concentration of interesting things to do makes Navy Pier a great place for the whole family. You can see the city from a new perspective on the Ferris wheel, take in a show at the Chicago Shakespeare Theater, board a boat tour or kick back with a margarita on a patio.",
         address: "600 E Grand Ave, Chicago, IL 60611",
@@ -205,6 +225,7 @@ var listOfAttractions = [
     Attraction(
         name: "The Green Mill",
         imageURL: "https://c1.staticflickr.com/8/7121/7593820346_c0898518e6_b.jpg",
+        tinyDescription: "An entertainment venue known for its jazz and poetry performances.",
         whatDescription: "This Uptown cocktail lounge is a fixture of Chicago’s live jazz scene and has been slinging drinks since before Prohibition (Al Capone and other gangsters used to hang out at the Green Mill).",
         whyDescription: "Once you’ve snapped a picture of the iconic Green Mill marquee, head inside, order a cocktail and take in a set from some of the city’s top jazz musicians. The music typically goes late, but you’ll need to show up early if you want to score a good seat.",
         address: "4802 N Broadway St, Chicago, IL 60640",
@@ -213,6 +234,7 @@ var listOfAttractions = [
     Attraction(
         name: "Chicago History Museum",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/2/24/Chicago_History.JPG",
+        tinyDescription: "A museum with exhibitions exploring both Chicago and American history.",
         whatDescription: "Not so long ago this vibrant museum was the stodgy ol' Chicago Historical Society, which let you cull through thousands of archived photographs and curio. That library still exists, but joining it are several permanent and temporary exhibits, the largest of which is a treasure trove of historical objects, including a chunk of the original Fort Dearborn.",
         whyDescription: "This cultural institution shares age-old stories about the city and its inhabitants through exhibitions, programming and hands-on displays. If you want an in-depth look at the places and people that make Chicago what it is today, it's worth a visit.",
         address: "1601 N Clark St, Chicago, IL 60614",
@@ -221,6 +243,7 @@ var listOfAttractions = [
     Attraction(
         name: "Humboldt Park",
         imageURL: "https://c1.staticflickr.com/9/8335/8094807951_db015ed964_b.jpg",
+        tinyDescription: "A park with a river, garden, fieldhouse, boathouse, and music pavilion.",
         whatDescription: "Filled with lagoons, pedestrian paths, wide-open fields and a boathouse, Humboldt Park is one of the biggest stretches of green space on Chicago’s West Side.",
         whyDescription: "Set in a predominantly Puerto Rican neighborhood, this park comes alive in the summer. You’ll find vendors selling mofongo (fried plantains are stuffed with meat), dogs running through the fields and people dining at the boathouse’s restaurant. Head to the south of the park to visit the National Museum of Puerto Rican Arts and Culture.",
         address: "1400 N Sacramento Ave Chicago, IL 60622",
@@ -229,6 +252,7 @@ var listOfAttractions = [
     Attraction(
         name: "Buckingham Fountain",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Buckingham_Fountain_in_Chicago%2C_USA.jpg",
+        tinyDescription: "One of the largest fountains in the world, meant allegorically to represent Lake Michigan.",
         whatDescription: "Built in 1927 as a donation from the family, the Clarence Buckingham Memorial Fountain is one of the largest in the world. Designed in the period's iconic Art Deco style, the central fountain is surrounded by four seahorses that represent Lake Michigan's four bordering states.",
         whyDescription: "From 8am to 11pm, the fountain bursts to life hourly, shooting 15,000 gallons of water through nearly 200 nozzles each minute to create an impressive display. After dusk, the water show is accompanied by lights, a must-see if you are in the neighborhood in the evening.",
         address: "301 S Columbus Dr, Chicago, IL 60605",
@@ -237,6 +261,7 @@ var listOfAttractions = [
     Attraction(
         name: "Magnificent Mile",
         imageURL: "https://c1.staticflickr.com/6/5517/11004435593_9dd2e51662_b.jpg",
+        tinyDescription: "An upscale section of Michigan Avenue, and Chicago’s largest shopping district.",
         whatDescription: "Michigan Avenue is probably one of the most attractive boulevards in America. Michigan Avenue splits between North and South designations at Madison Street. This district is also known for its theaters, which host touring plays, musicals, and comedy acts.",
         whyDescription: "The city's famous Magnificent Mile is a section of Michigan Avenue north of the Chicago River, with numerous galleries, boutiques, and luxury shops. Some of the attractions along here include the John Hancock Center, the Wrigley Building, and the Tribune Tower.",
         address: "Magnificent Mile Chicago, IL 60611",

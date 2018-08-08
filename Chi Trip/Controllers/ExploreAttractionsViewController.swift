@@ -64,6 +64,7 @@ extension ExploreAttractionsViewController: UITableViewDelegate, UITableViewData
         
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "attractionsDetailSegue" {
@@ -77,27 +78,3 @@ extension ExploreAttractionsViewController: UITableViewDelegate, UITableViewData
     }
     
 }
-
-
-
-
-
-//
-//FROM NOTES APP AHHHHHH
-//
-//override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//    // 1
-//    return notes.count
-//}
-//
-//override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    let cell = tableView.dequeueReusableCell(withIdentifier: "listNotesTableViewCell", for: indexPath) as! ListNotesTableViewCell
-//
-//    // 2
-//    let note = notes[indexPath.row]
-//    cell.noteTitle.text = note.title
-//    // 3
-//    cell.lastModifiedLabel.text = note.modificationTime.convertToString()
-//
-//    return cell
-//}
