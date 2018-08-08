@@ -46,11 +46,8 @@ class AttractionDetailViewController: UIViewController {
 //        imageView.image = listOfAttractions?.imageURL
         let combinedTextView = """
         
-        What is it?
-        
         \(self.attraction.whatDescription)
         
-        Why come?
         \(self.attraction.whyDescription)
         
         """

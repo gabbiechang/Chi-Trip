@@ -14,4 +14,5 @@ class AttractionsTableViewCell: UITableViewCell {
     @IBOutlet weak var cityAttractionLabel: UILabel!
     @IBOutlet weak var cityImageView: UIImageView!
     
+    @IBOutlet weak var tinyDescriptionLabel: UILabel!
 }

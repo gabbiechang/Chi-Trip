@@ -32,25 +32,6 @@
             </objects>
             <point key="canvasLocation" x="1930.4000000000001" y="374.66266866566718"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ywH-Qt-308">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NtT-0Z-5ab" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g2H-m1-Ouq">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.16470588235294117" green="0.36470588235294116" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="01J-lp-oVM" kind="relationship" relationship="rootViewController" id="v5d-os-nIy"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wr6-HO-W0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="991.20000000000005" y="374.66266866566718"/>
-        </scene>
     </scenes>
     <resources>
         <image name="finalLandingPageChiTrip" width="250" height="444"/>

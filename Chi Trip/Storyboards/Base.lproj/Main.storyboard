@@ -135,7 +135,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gfv-Nb-2FY">
-                                                            <rect key="frame" x="130" y="19" width="215" height="50.5"/>
+                                                            <rect key="frame" x="130" y="21" width="215" height="46"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Bean" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gv-Of-h7I">
                                                                     <rect key="frame" x="0.0" y="0.0" width="215" height="30"/>
@@ -143,9 +143,9 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOu-px-Byu">
-                                                                    <rect key="frame" x="0.0" y="30" width="215" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOu-px-Byu">
+                                                                    <rect key="frame" x="0.0" y="30" width="215" height="16"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -165,6 +165,7 @@
                                         <connections>
                                             <outlet property="cityAttractionLabel" destination="1Gv-Of-h7I" id="AJd-tv-8Ec"/>
                                             <outlet property="cityImageView" destination="Wqb-I9-uN5" id="zlj-pS-Qnf"/>
+                                            <outlet property="tinyDescriptionLabel" destination="TOu-px-Byu" id="odF-zu-Nx7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -507,11 +508,11 @@
             </objects>
             <point key="canvasLocation" x="1832.8" y="-78.710644677661179"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Explore-->
         <scene sceneID="thr-4Y-r79">
             <objects>
                 <navigationController id="6rO-6F-aRI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="bean" id="T2V-YS-X2m"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="finaChiTripPin25PX" selectedImage="finaChiTripPin25PX" id="T2V-YS-X2m"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vo1-MZ-K7X">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -610,18 +611,18 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttractionsTableViewCell" id="uC6-Tq-rOP" userLabel="Favorites Table View Cell" customClass="AttractionsTableViewCell" customModule="Chi_Trip" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uC6-Tq-rOP" id="yS1-GP-p66">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uC6-Tq-rOP" id="yS1-GP-p66">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jKB-XL-VMO">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKB-XL-VMO">
                                                     <rect key="frame" x="10" y="10" width="120" height="89"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="89" id="mvs-Nf-Rku"/>
+                                                        <constraint firstAttribute="height" constant="88" id="mvs-Nf-Rku"/>
                                                         <constraint firstAttribute="width" constant="120" id="mxe-H6-2CQ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Bean" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huk-ft-R7G">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The Bean" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huk-ft-R7G">
                                                     <rect key="frame" x="140" y="21" width="230" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="Umg-6P-ama"/>
@@ -693,11 +694,11 @@
             </objects>
             <point key="canvasLocation" x="808.79999999999995" y="2808.8455772113944"/>
         </scene>
-        <!--Item-->
+        <!--Route-->
         <scene sceneID="21w-dj-hhA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OQg-Kh-Hn4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="e91-L0-z38"/>
+                    <tabBarItem key="tabBarItem" title="Route" image="finalChiTripMap25PX" selectedImage="finalChiTripMap25PX" id="e91-L0-z38"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4w1-iM-zsB">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -718,8 +719,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bean" width="35" height="28"/>
         <image name="bean.jpg" width="336" height="223"/>
+        <image name="finaChiTripPin25PX" width="25" height="25"/>
+        <image name="finalChiTripMap25PX" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="0.11372549019607843" green="0.19215686274509802" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

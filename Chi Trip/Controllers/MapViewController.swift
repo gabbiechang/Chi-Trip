@@ -8,7 +8,6 @@
 //
 //import Foundation
 import UIKit
-//import GoogleMaps
 import MapKit
 import SwiftyJSON
 //
@@ -18,7 +17,6 @@ class MapViewController: UIViewController
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var favorites = [Favorite]()
-//    var googleAPIKey = "AIzaSyAh9_Ub7U3ySx5pJg5roU46TJJqab__qeM"
     
     @IBAction func segmentedControlerDidChange(_ seg: UISegmentedControl) {
         if seg.selectedSegmentIndex == 0 { //my favs
@@ -96,8 +94,8 @@ class MapViewController: UIViewController
     
     var currentPlacemark: CLPlacemark?
     
-    @IBAction func showDirection(sender: Any)
-    {
+    @IBAction func showDirection(sender: Any) {
+        
         guard let currentPlacemark = currentPlacemark else {
             return
         }
@@ -153,7 +151,7 @@ extension MapViewController : MKMapViewDelegate
                 view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
-                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+//                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
             }
             
             return view
@@ -173,7 +171,7 @@ extension MapViewController : MKMapViewDelegate
     {
         let renderer = MKPolylineRenderer(overlay: overlay)
         
-        renderer.strokeColor = UIColor.orange
+        renderer.strokeColor = UIColor.purple
         renderer.lineWidth = 4.0
         
         return renderer
@@ -192,6 +190,10 @@ extension Favorite: MKAnnotation {
     
     public var title: String? {
         return self.name
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
+        let location = view.annotation as! Attraction        
     }
     
 }

@@ -44,7 +44,7 @@ extension ExploreAttractionsViewController: UITableViewDelegate, UITableViewData
         let attraction = attractions[indexPath.row]
         
         cell.cityAttractionLabel.text = attraction.name
-        
+        cell.tinyDescriptionLabel.text = attraction.tinyDescription
         
         let imageURL = URL(string: attraction.imageURL)
 //        guard let imageURL = URL(string: (attraction.imageURL)) else { return assertionFailure("Image URL failed")}
