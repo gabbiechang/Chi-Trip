@@ -10,7 +10,12 @@
 import UIKit
 import MapKit
 import SwiftyJSON
-//
+import AddressBook
+
+
+
+
+
 class MapViewController: UIViewController
 {
     @IBOutlet weak var mapView: MKMapView!
@@ -141,29 +146,35 @@ extension MapViewController : MKMapViewDelegate
 {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
     {
-        if let annotation = annotation as? Attraction {
-            let identifier = "pin"
-            var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
-                dequeuedView.annotation = annotation
-                view = dequeuedView
-            } else {
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: -5, y: 5)
-//                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
-            }
-            
-            return view
+        let identifier = "pin"
+        var view: MKPinAnnotationView
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+        } else {
+            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+            //                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+        }
+
+        if annotation is Attraction {
+            let red = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1.0)
+            view.pinTintColor = red
+        } else if annotation is Favorite {
+            let red = UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1.0)
+            view.pinTintColor = red
         }
         
-        return nil
+        return view
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
     {
         if let location = view.annotation as? Attraction {
             self.currentPlacemark = MKPlacemark(coordinate: location.coordinate)
+        } else if let favorite = view.annotation as? Favorite {
+            self.currentPlacemark = MKPlacemark(coordinate: favorite.coordinate)
         }
     }
     
@@ -185,8 +196,7 @@ extension Favorite: MKAnnotation {
     }
     
     public var subtitle: String? {
-        return nil
-//        return self.address
+        return self.address
     }
     
     public var title: String? {
@@ -196,6 +206,18 @@ extension Favorite: MKAnnotation {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
         let location = view.annotation as! Attraction        
     }
+//
+//
+//    func mapItem() -> MKMapItem
+//    {
+//        let addressDictionary = [String(kABPersonAddressStreetKey) : name]
+//        let placemark = MKPlacemark(coordinate: self.coordinate, addressDictionary: addressDictionary)
+//        let mapItem = MKMapItem(placemark: placemark)
+//
+//        mapItem.name = name
+//
+//        return mapItem
+//    }
     
 }
 

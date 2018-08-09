@@ -12,6 +12,9 @@ import Kingfisher
 
 class AttractionDetailViewController: UIViewController {
     
+    let lightAqua = UIColor(red: 150/255, green: 187/255, blue: 187/255, alpha: 1.0)
+
+    
     // MARK: - IBOutlets
     
     @IBOutlet weak var imageView: UIImageView!
@@ -67,43 +70,47 @@ class AttractionDetailViewController: UIViewController {
     }
     
     func setupButton() {
-        //logikkk for setup button
+        if CoreDataHelper.contains(attraction) != nil {
+            addToFavsButton.setTitle("Remove from Favorites", for: .normal)
+        } else {
+            addToFavsButton.setTitle("Add to Favorites", for: .normal)
+        }
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.setupButton()
     }
     
     // MARK: - IBActions
     
     @IBAction func addToFavoritesButton(_ sender: UIButton) {
         
-        let favorite = CoreDataHelper.newFavorite()
-        favorite.descrip = ""
-        favorite.name = attraction.name
-        favorite.lat = attraction.coordinate.latitude
-        favorite.long = attraction.coordinate.longitude
         
-//        guard let imageURL = URL(string: (attraction?.imageURL)!) else { return assertionFailure("Image URL failed")}
-//        //TODO: store images in the file base
-//        let imageData = try? Data(contentsOf: imageURL)
-//        favorite.image = imageData
-//
-        favorite.image = imageView.image!
+        if let favoriteToRemove = CoreDataHelper.contains(attraction) {
+            
+            CoreDataHelper.deleteFavorite(favorite: favoriteToRemove)
+        } else {
+            
+            let favorite = CoreDataHelper.newFavorite()
+            favorite.descrip = ""
+            favorite.name = attraction.name
+            favorite.lat = attraction.coordinate.latitude
+            favorite.long = attraction.coordinate.longitude
+            favorite.tinyDescription = attraction.tinyDescription
+            favorite.address = attraction.address
+            
+            //        guard let imageURL = URL(string: (attraction?.imageURL)!) else { return assertionFailure("Image URL failed")}
+            //        //TODO: store images in the file base
+            //        let imageData = try? Data(contentsOf: imageURL)
+            //        favorite.image = imageData
+            //
+            favorite.image = imageView.image!
+        }
         
         CoreDataHelper.save()
         
         setupButton()
-//        let lightBlue = UIColor(red: 1, green: 165/255, blue: 233, alpha: 1)
-//        let mediumBlue = UIColor(red: 1, green: 165/255, blue: 233, alpha: 1)
-//        let darkBlue = UIColor(red: 7.1, green: 10.6/255, blue: 14.1, alpha: 1)
-//        let lightPurple = UIColor(red: 1, green: 165/255, blue: 233, alpha: 1)
-
-        
-//        if addToFavsButton.backgroundColor == UIColor.darkBlue {
-//            addToFavsButton.backgroundColor = UIColor.mediumBlue
-//        }
-//        else if addToFavsButton.backgroundColor == UIColor.mediumBlue {
-//            addToFavsButton.backgroundColor = UIColor.darkBlue
-//        }
-//
-//        addToFavsButton.setTitleColor(UIColor.blue, for: UIControlState.selected)
 
         
     }

@@ -39,7 +39,7 @@ extension ExploreAttractionsViewController: UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "attractionsTableViewCell", for: indexPath) as! AttractionsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AttractionsTableViewCell", for: indexPath) as! AttractionsTableViewCell
         
         let attraction = attractions[indexPath.row]
         

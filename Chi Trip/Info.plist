@@ -20,8 +20,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Chi Trip needs your location to give you customized routes.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Chi Trip needs your location to give you customized routes.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Chi Trip needs your location to give you customized routes.</string>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>b</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -41,11 +47,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Chi Trip needs your location to give you customized routes.</string>
-	<key>NSLocationUsageDescription</key>
-	<string>Chi Trip needs your location to give you customized routes.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Chi Trip needs your location to give you customized routes.</string>
 </dict>
 </plist>

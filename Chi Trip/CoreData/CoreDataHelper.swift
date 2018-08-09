@@ -27,6 +27,20 @@ struct CoreDataHelper {
         return context
     }()
     
+    static func contains(_ attraction: Attraction) -> Favorite? {
+        let request: NSFetchRequest<Favorite> = Favorite.fetchRequest()
+        request.predicate = NSPredicate(format: "name == %@", attraction.title!)
+        do {
+            let favorites = try context.fetch(request)
+            
+            return favorites.first
+        } catch {
+            
+        }
+        
+        return nil
+    }
+    
     static func newFavorite() -> Favorite {
         let favorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite", into: context) as! Favorite
         return favorite

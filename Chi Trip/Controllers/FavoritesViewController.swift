@@ -18,7 +18,8 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete:
-            self.favorite.remove(at: indexPath.row)
+            let deletedFav = self.favorite.remove(at: indexPath.row)
+            CoreDataHelper.deleteFavorite(favorite: deletedFav)
             tableView.deleteRows(at: [indexPath], with: .fade)
             break
         default:
@@ -42,6 +43,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AttractionsTableViewCell", for: indexPath) as! AttractionsTableViewCell
         let favorite = self.favorite[indexPath.row]
+        cell.favoriteTinyLabel.text = favorite.tinyDescription
         cell.cityAttractionLabel?.text = favorite.name!
         cell.cityImageView?.image = favorite.image
         
