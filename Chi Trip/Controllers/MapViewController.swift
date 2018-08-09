@@ -94,7 +94,7 @@ class MapViewController: UIViewController
     
     var currentPlacemark: CLPlacemark?
     
-    @IBAction func showDirection(sender: Any) {
+    @IBAction func showDirection(_ sender: UIButton) {
         
         guard let currentPlacemark = currentPlacemark else {
             return
@@ -171,7 +171,8 @@ extension MapViewController : MKMapViewDelegate
     {
         let renderer = MKPolylineRenderer(overlay: overlay)
         
-        renderer.strokeColor = UIColor.purple
+        let lightPurple = UIColor(red: 141/255, green: 107/255, blue: 136/255, alpha: 1.0)
+        renderer.strokeColor = lightPurple
         renderer.lineWidth = 4.0
         
         return renderer

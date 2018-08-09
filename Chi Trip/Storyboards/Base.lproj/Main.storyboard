@@ -243,7 +243,7 @@
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-Il-UqP">
                                 <rect key="frame" x="30" y="575" width="315" height="30"/>
                                 <color key="backgroundColor" red="0.55294117647058827" green="0.41960784313725491" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Add to My Trips">
+                                <state key="normal" title="Add to My Favorites">
                                     <color key="titleColor" red="0.9882352941176471" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -576,6 +576,14 @@
                                     <action selector="segmentedControlerDidChange:" destination="HXE-Gr-0hH" eventType="valueChanged" id="hbq-ba-gUu"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzs-lZ-aKC">
+                                <rect key="frame" x="309" y="78" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="goButton"/>
+                                <connections>
+                                    <action selector="showDirection:" destination="HXE-Gr-0hH" eventType="touchUpInside" id="0fx-Ia-ZOb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -631,6 +639,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtx-OS-Hfv">
+                                                    <rect key="frame" x="166" y="54" width="33" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.9882352941176471" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -669,7 +684,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bO-sZ-XBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1748" y="2808.8455772113944"/>
+            <point key="canvasLocation" x="220" y="3508.6956521739135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rlw-FC-JCt">
@@ -692,7 +707,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXh-Ot-xOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808.79999999999995" y="2808.8455772113944"/>
+            <point key="canvasLocation" x="220" y="2564"/>
         </scene>
         <!--Route-->
         <scene sceneID="21w-dj-hhA">
@@ -722,6 +737,7 @@
         <image name="bean.jpg" width="336" height="223"/>
         <image name="finaChiTripPin25PX" width="25" height="25"/>
         <image name="finalChiTripMap25PX" width="25" height="25"/>
+        <image name="goButton" width="612" height="605"/>
     </resources>
     <color key="tintColor" red="0.11372549019607843" green="0.19215686274509802" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
