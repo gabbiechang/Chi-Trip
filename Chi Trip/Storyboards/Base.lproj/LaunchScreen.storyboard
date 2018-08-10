@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,25 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="uHg-Lg-zAT">
-                                <rect key="frame" x="72" y="246" width="375" height="667"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="667" id="OKo-cd-N7D"/>
-                                </constraints>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="xBZ-Mp-WMG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="uHg-Lg-zAT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="226" id="DHc-qT-KBG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uHg-Lg-zAT" secondAttribute="trailing" constant="-88" id="Po1-98-GR3"/>
-                            <constraint firstItem="uHg-Lg-zAT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="RL0-gF-vDo"/>
+                            <constraint firstItem="xBZ-Mp-WMG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="72U-J0-gSw"/>
+                            <constraint firstItem="xBZ-Mp-WMG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nNu-sw-1F1"/>
+                            <constraint firstItem="xBZ-Mp-WMG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sr9-o5-1FA"/>
+                            <constraint firstItem="xBZ-Mp-WMG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ztL-6k-8lw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="TY1-xJ-UAJ"/>
-                    <connections>
-                        <outlet property="backgroundView" destination="uHg-Lg-zAT" id="0ih-l3-KF4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
