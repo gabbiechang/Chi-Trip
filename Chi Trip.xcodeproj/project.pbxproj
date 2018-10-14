@@ -98,9 +98,9 @@
 				450DB468211B6B2C00186194 /* Assets.xcassets */,
 				45B785B1211226FC000E3102 /* CoreData */,
 				45EFED1D21115A89002CF48A /* Trash */,
+				45C56B00210A3B760032362D /* Models */,
 				45C56B02210A3B9B0032362D /* Storyboards */,
 				45C56B01210A3B7C0032362D /* Views */,
-				45C56B00210A3B760032362D /* Models */,
 				45C56AFF210A3B6E0032362D /* Controllers */,
 				456D43DA2107A70C0005B613 /* Networking Services */,
 				456D43C8210662B40005B613 /* AppDelegate.swift */,
@@ -486,7 +486,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.gabriellechang.chitrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -505,7 +505,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.gabriellechang.chitrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

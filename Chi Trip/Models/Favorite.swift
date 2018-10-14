@@ -34,7 +34,7 @@ extension Favorite {
             
             //get the documents url
             let fileManager = FileManager.default
-            let documentURL = fileManager.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!
+            let documentURL = fileManager.urls(for:  FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!
             
             //append filename to dataValue
             let imagePath = documentURL.appendingPathComponent("\(filePath).jpg")

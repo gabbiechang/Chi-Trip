@@ -593,6 +593,7 @@
                     <navigationItem key="navigationItem" title="My Favorites" id="sKi-qO-3iS"/>
                     <connections>
                         <outlet property="tableView" destination="7Jd-RF-Lbn" id="rj2-uT-RJU"/>
+                        <segue destination="F0Z-co-lnI" kind="show" id="2fN-uE-czT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bO-sZ-XBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -652,5 +653,8 @@
         <image name="finalChiTripMap25PX" width="25" height="25"/>
         <image name="goButton" width="612" height="605"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="g4g-xN-LZa"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.11372549019607843" green="0.19215686274509802" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
